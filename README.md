@@ -4,7 +4,7 @@ Use the new GPT-4 api to build a chatGPT chatbot for multiple Large PDF files.
 
 Tech stack used includes LangChain, Chroma, Typescript, Openai, and Next.js. LangChain is a framework that makes it easier to build scalable AI/LLM apps and chatbots. Chroma is a vectorstore for storing embeddings and your PDF in text to later retrieve similar docs.
 
-[Tutorial video using Prisma instead of the opensource Chroma db](https://www.youtube.com/watch?v=ih9PBGVVOO4)
+[Tutorial video using the Pinecone db instead of the opensource Chroma db](https://www.youtube.com/watch?v=ih9PBGVVOO4)
 
 The visual guide of this repo and tutorial is in the `visual guide` folder.
 
@@ -77,7 +77,7 @@ In general, keep an eye out in the `issues` and `discussions` section of this re
 
 - Make sure you're running the latest Node version. Run `node -v`
 - Try a different PDF or convert your PDF to text first. It's possible your PDF is corrupted, scanned, or requires OCR to convert to text.
-- `Console.log` the `env` variables and make sure they are exposed.
+- `console.log` the `env` variables and make sure they are exposed.
 - Make sure you're using the same versions of LangChain and Chroma as this repo.
 - Check that you've created an `.env` file that contains your valid (and working) API keys, environment and index name.
 - If you change `modelName` in `OpenAI`, make sure you have access to the api for the appropriate model.
