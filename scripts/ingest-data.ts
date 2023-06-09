@@ -1,7 +1,8 @@
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
 import { Chroma } from 'langchain/vectorstores/chroma';
-import { CustomPDFLoader } from '@/utils/customPDFLoader';
+// import { CustomPDFLoader } from '@/utils/customPDFLoader';
+import { PDFLoader } from 'langchain/document_loaders/fs/pdf';
 import { DirectoryLoader } from 'langchain/document_loaders/fs/directory';
 
 /* Name of directory to retrieve your files from */
@@ -10,7 +11,7 @@ const filePath = 'docs';
 export const run = async () => {
   try {
     const directoryLoader = new DirectoryLoader(filePath, {
-      '.pdf': (path) => new CustomPDFLoader(path),
+      '.pdf': (path) => new PDFLoader(path),
     });
 
     const rawDocs = await directoryLoader.load();
@@ -24,6 +25,7 @@ export const run = async () => {
 
     console.log('creating vector store...');
 
+    //const embedder = new OpenAIEmbeddings({ maxConcurrency: 1 });
     const embedder = new OpenAIEmbeddings();
 
     await Chroma.fromDocuments(docs, embedder, {
