@@ -12,6 +12,13 @@ The visual guide of this repo and tutorial is in the `visual guide` folder.
 
 Prelude: Please make sure you have already downloaded node on your system and the version is 18 or greater.
 
+## Features
+
+- Support for multiple file formats: docx, pptx, html, txt, csv.
+- Support for multiple files. Just put your files to docs folder, and run ```npm run ingest```.
+- Both GPT-3.5, GPT-4 are available. GPT-4 is recommended for better answer, while with slower response.
+- Open source chromadb as vector database, you don't need to send your data to a cloud commercial vectordb.
+
 ## Deployment
 
 1. Clone the repo or download the ZIP
@@ -74,6 +81,17 @@ Once you've verified that the embeddings and content have been successfully adde
 ```
 http://localhost:3000
 ```
+
+
+## Snapshot of the product
+
+![Snapshot for Chat with your docs](images/chat_with_docs_en.jpg)
+
+![Snapshot for Chat with your docs](images/chat_with_docs_cn.jpg)
+
+Just a few steps to deploy your server, prepare your files, and you can chat with your docs.
+
+
 
 ## Troubleshooting
 
