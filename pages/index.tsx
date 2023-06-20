@@ -275,8 +275,8 @@ export default function Home() {
           </main>
         </div>
         <footer className="m-auto p-4">
-          <a href="https://twitter.com/mayowaoshin">
-            Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
+          <a href="https://twitter.com/david_euler">
+            Powered by LangChainAI. Demo built by Mayo, David (Twitter: @mayowaoshin, @david_euler).
           </a>
         </footer>
       </Layout>
